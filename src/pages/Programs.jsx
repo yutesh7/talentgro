@@ -45,7 +45,7 @@ const Programs = () => {
             <motion.div 
               key={idx}
               whileHover={{ scale: 1.02 }}
-              className="bg-white dark:bg-zinc-900 rounded-2xl p-8 shadow-sm border border-slate-100 dark:border-zinc-800 flex flex-col md:flex-row gap-6 items-start"
+              className="bg-stone-100 dark:bg-zinc-900 rounded-2xl p-8 shadow-sm border border-slate-100 dark:border-zinc-800 flex flex-col md:flex-row gap-6 items-start"
             >
               <div className={`w-16 h-16 rounded-2xl flex items-center justify-center shrink-0 ${prog.color}`}>
                 <prog.icon size={32} />

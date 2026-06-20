@@ -15,7 +15,7 @@ const VolunteerHub = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
           {/* Volunteer Registration Form */}
-          <div className="lg:col-span-2 bg-white dark:bg-zinc-900 rounded-3xl p-8 shadow-sm border border-slate-100 dark:border-zinc-800">
+          <div className="lg:col-span-2 bg-stone-100 dark:bg-zinc-900 rounded-3xl p-8 shadow-sm border border-slate-100 dark:border-zinc-800">
             <h2 className="text-2xl font-bold text-brand-blue dark:text-white mb-6">Become a Volunteer</h2>
             <form className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -33,7 +33,7 @@ const VolunteerHub = () => {
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-slate-700 dark:text-slate-200 mb-2">Area of Interest</label>
-                  <select className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-zinc-800 focus:outline-none focus:border-brand-orange bg-white dark:bg-zinc-900">
+                  <select className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-zinc-800 focus:outline-none focus:border-brand-orange bg-stone-100 dark:bg-zinc-900">
                     <option>Select Role</option>
                     <option>Teacher</option>
                     <option>Doctor</option>
@@ -43,7 +43,7 @@ const VolunteerHub = () => {
                 </div>
                 <div className="md:col-span-2">
                   <label className="block text-sm font-medium text-slate-700 dark:text-slate-200 mb-2">Hours per Month</label>
-                  <select className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-zinc-800 focus:outline-none focus:border-brand-orange bg-white dark:bg-zinc-900">
+                  <select className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-zinc-800 focus:outline-none focus:border-brand-orange bg-stone-100 dark:bg-zinc-900">
                     <option>2 Hours</option>
                     <option>5 Hours</option>
                     <option>10+ Hours</option>

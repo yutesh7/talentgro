@@ -23,7 +23,7 @@ const ScholarshipFinder = () => {
         </div>
 
         {/* Search & Filters */}
-        <div className="bg-white dark:bg-zinc-900 rounded-2xl p-6 shadow-sm border border-slate-100 dark:border-zinc-800 mb-8">
+        <div className="bg-stone-100 dark:bg-zinc-900 rounded-2xl p-6 shadow-sm border border-slate-100 dark:border-zinc-800 mb-8">
           <div className="flex flex-col md:flex-row gap-4">
             <div className="relative flex-grow">
               <Search className="absolute left-3 top-3 text-slate-400" size={20} />
@@ -36,17 +36,17 @@ const ScholarshipFinder = () => {
               />
             </div>
             <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0">
-              <select className="px-4 py-3 rounded-xl border border-slate-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-slate-700 dark:text-slate-200 min-w-[120px]">
+              <select className="px-4 py-3 rounded-xl border border-slate-200 dark:border-zinc-800 bg-stone-100 dark:bg-zinc-900 text-slate-700 dark:text-slate-200 min-w-[120px]">
                 <option>All States</option>
                 <option>Maharashtra</option>
                 <option>Delhi</option>
               </select>
-              <select className="px-4 py-3 rounded-xl border border-slate-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-slate-700 dark:text-slate-200 min-w-[120px]">
+              <select className="px-4 py-3 rounded-xl border border-slate-200 dark:border-zinc-800 bg-stone-100 dark:bg-zinc-900 text-slate-700 dark:text-slate-200 min-w-[120px]">
                 <option>Any Class</option>
                 <option>Class 10</option>
                 <option>Class 12</option>
               </select>
-              <select className="px-4 py-3 rounded-xl border border-slate-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-slate-700 dark:text-slate-200 min-w-[150px]">
+              <select className="px-4 py-3 rounded-xl border border-slate-200 dark:border-zinc-800 bg-stone-100 dark:bg-zinc-900 text-slate-700 dark:text-slate-200 min-w-[150px]">
                 <option>Any Income</option>
                 <option>&lt; 2 Lakhs</option>
                 <option>&lt; 5 Lakhs</option>
@@ -62,7 +62,7 @@ const ScholarshipFinder = () => {
               key={s.id}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="bg-white dark:bg-zinc-900 rounded-2xl p-6 shadow-sm hover:shadow-md border border-slate-100 dark:border-zinc-800 relative group transition-shadow"
+              className="bg-stone-100 dark:bg-zinc-900 rounded-2xl p-6 shadow-sm hover:shadow-md border border-slate-100 dark:border-zinc-800 relative group transition-shadow"
             >
               <button className="absolute top-6 right-6 text-slate-300 hover:text-brand-orange transition-colors">
                 <Bookmark size={24} />

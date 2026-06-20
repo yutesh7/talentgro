@@ -15,7 +15,7 @@ const About = () => {
       </div>
 
       {/* Story Section */}
-      <section className="py-20 bg-white dark:bg-zinc-900">
+      <section className="py-20 bg-stone-100 dark:bg-zinc-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <motion.div

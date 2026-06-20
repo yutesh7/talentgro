@@ -12,6 +12,7 @@ const Navbar = () => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Programs', path: '/programs' },
+    { name: 'Events', path: '/events' },
     { 
       name: 'Blogs', 
       path: '#',
@@ -24,7 +25,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-white/90 dark:bg-black/90 backdrop-blur-md fixed w-full z-50 top-0 shadow-sm border-b border-slate-100 dark:border-zinc-800 transition-colors duration-300">
+    <nav className="bg-stone-100/90 dark:bg-black/90 backdrop-blur-md fixed w-full z-50 top-0 shadow-sm border-b border-slate-100 dark:border-zinc-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -47,7 +48,7 @@ const Navbar = () => {
                       <ChevronDown size={14} className="group-hover:rotate-180 transition-transform duration-300" />
                     </button>
                     {/* Dropdown Menu */}
-                    <div className="absolute top-full left-0 mt-0 w-48 bg-white dark:bg-zinc-900 border border-slate-100 dark:border-zinc-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden">
+                    <div className="absolute top-full left-0 mt-0 w-48 bg-stone-100 dark:bg-zinc-900 border border-slate-100 dark:border-zinc-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 overflow-hidden">
                       <div className="py-2">
                         {link.subLinks.map(subLink => (
                           <Link
@@ -114,7 +115,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white dark:bg-black border-t border-slate-100 dark:border-zinc-800 overflow-y-auto max-h-[calc(100vh-80px)]">
+        <div className="md:hidden bg-stone-100 dark:bg-black border-t border-slate-100 dark:border-zinc-800 overflow-y-auto max-h-[calc(100vh-80px)]">
           <div className="px-4 pt-2 pb-6 space-y-2">
             {links.map((link) => (
               link.subLinks ? (

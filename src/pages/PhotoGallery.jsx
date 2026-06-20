@@ -3,13 +3,10 @@ import { motion } from 'framer-motion';
 const PhotoGallery = () => {
   const photos = [
     '/images/uploaded-banner.jpg',
-    'https://dishaforindia.org/wp-content/uploads/2021/08/gallery-2-1.jpg',
-    'https://dishaforindia.org/wp-content/uploads/2021/08/gallery-2-2.jpg',
     'https://dishaforindia.org/wp-content/uploads/2021/08/gallery-2-3.jpg',
     'https://dishaforindia.org/wp-content/uploads/2021/08/gallery-2-4.jpg',
     'https://dishaforindia.org/wp-content/uploads/2021/08/gallery-2-5.jpg',
     'https://dishaforindia.org/wp-content/uploads/2023/04/disha-1.jpg',
-    'https://dishaforindia.org/wp-content/uploads/2023/04/disha-2.jpg',
     'https://dishaforindia.org/wp-content/uploads/2023/04/disha-3.jpg',
     'https://dishaforindia.org/wp-content/uploads/2023/05/1-2.jpg',
     'https://dishaforindia.org/wp-content/uploads/2023/05/2-1.jpg',

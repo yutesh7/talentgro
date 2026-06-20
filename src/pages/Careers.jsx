@@ -19,7 +19,7 @@ const Careers = () => {
           </p>
         </div>
 
-        <div className="bg-white dark:bg-zinc-900 rounded-3xl p-8 md:p-12 shadow-sm border border-slate-100 dark:border-zinc-800 mb-16">
+        <div className="bg-stone-100 dark:bg-zinc-900 rounded-3xl p-8 md:p-12 shadow-sm border border-slate-100 dark:border-zinc-800 mb-16">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold text-brand-blue dark:text-white mb-6">Why work with us?</h2>
@@ -41,7 +41,7 @@ const Careers = () => {
         <div className="space-y-4 max-w-4xl mx-auto">
           <h3 className="text-2xl font-bold text-slate-800 dark:text-slate-100 mb-6">Open Positions</h3>
           {jobs.map((job, idx) => (
-            <div key={idx} className="bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-slate-100 dark:border-zinc-800 shadow-sm hover:shadow-md transition-shadow flex flex-col sm:flex-row justify-between items-center group">
+            <div key={idx} className="bg-stone-100 dark:bg-zinc-900 rounded-2xl p-6 border border-slate-100 dark:border-zinc-800 shadow-sm hover:shadow-md transition-shadow flex flex-col sm:flex-row justify-between items-center group">
               <div className="mb-4 sm:mb-0">
                 <h4 className="text-xl font-bold text-brand-blue dark:text-white group-hover:text-brand-orange transition-colors">{job.title}</h4>
                 <div className="flex items-center gap-4 text-sm text-slate-500 dark:text-slate-400 mt-2">

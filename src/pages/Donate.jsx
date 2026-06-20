@@ -12,7 +12,7 @@ const Donate = () => {
   };
 
   return (
-    <div className="w-full bg-white dark:bg-zinc-900 py-12">
+    <div className="w-full bg-stone-100 dark:bg-zinc-900 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -34,7 +34,7 @@ const Donate = () => {
           </div>
 
           {/* Right side form */}
-          <div className="bg-white dark:bg-zinc-900 rounded-3xl p-8 shadow-xl border border-slate-100 dark:border-zinc-800 relative">
+          <div className="bg-stone-100 dark:bg-zinc-900 rounded-3xl p-8 shadow-xl border border-slate-100 dark:border-zinc-800 relative">
             <h2 className="text-2xl font-bold text-brand-blue dark:text-white mb-8 text-center">Make a Secure Donation</h2>
             
             {/* Amount Selector */}

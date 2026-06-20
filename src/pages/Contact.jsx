@@ -16,7 +16,7 @@ const Contact = () => {
           
           {/* Contact Info */}
           <div className="space-y-6">
-            <div className="bg-white dark:bg-zinc-900 rounded-2xl p-8 shadow-sm border border-slate-100 dark:border-zinc-800 flex items-start gap-4">
+            <div className="bg-stone-100 dark:bg-zinc-900 rounded-2xl p-8 shadow-sm border border-slate-100 dark:border-zinc-800 flex items-start gap-4">
               <div className="w-12 h-12 bg-brand-orange/10 rounded-full flex items-center justify-center text-brand-orange shrink-0">
                 <MapPin size={24} />
               </div>
@@ -26,7 +26,7 @@ const Contact = () => {
               </div>
             </div>
             
-            <div className="bg-white dark:bg-zinc-900 rounded-2xl p-8 shadow-sm border border-slate-100 dark:border-zinc-800 flex items-start gap-4">
+            <div className="bg-stone-100 dark:bg-zinc-900 rounded-2xl p-8 shadow-sm border border-slate-100 dark:border-zinc-800 flex items-start gap-4">
               <div className="w-12 h-12 bg-brand-orange/10 rounded-full flex items-center justify-center text-brand-orange shrink-0">
                 <Phone size={24} />
               </div>
@@ -36,7 +36,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-white dark:bg-zinc-900 rounded-2xl p-8 shadow-sm border border-slate-100 dark:border-zinc-800 flex items-start gap-4">
+            <div className="bg-stone-100 dark:bg-zinc-900 rounded-2xl p-8 shadow-sm border border-slate-100 dark:border-zinc-800 flex items-start gap-4">
               <div className="w-12 h-12 bg-brand-orange/10 rounded-full flex items-center justify-center text-brand-orange shrink-0">
                 <Mail size={24} />
               </div>
@@ -48,7 +48,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="lg:col-span-2 bg-white dark:bg-zinc-900 rounded-3xl p-8 md:p-12 shadow-sm border border-slate-100 dark:border-zinc-800">
+          <div className="lg:col-span-2 bg-stone-100 dark:bg-zinc-900 rounded-3xl p-8 md:p-12 shadow-sm border border-slate-100 dark:border-zinc-800">
             <h2 className="text-2xl font-bold text-brand-blue dark:text-white mb-8">Send us a message</h2>
             <form className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

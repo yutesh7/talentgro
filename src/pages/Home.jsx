@@ -1,11 +1,28 @@
-import { useState, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { useState, useRef, useEffect } from 'react';
+import { motion, useSpring } from 'framer-motion';
 import { ArrowRight, BookOpen, Users, Award, Calendar, Heart, PlayCircle, Quote, Play } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const videoRef = useRef(null);
+  
+  // Interactive background state
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const springConfig = { damping: 25, stiffness: 200, mass: 0.5 };
+  const mouseX = useSpring(0, springConfig);
+  const mouseY = useSpring(0, springConfig);
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+      mouseX.set(e.clientX);
+      mouseY.set(e.clientY);
+    };
+    
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, [mouseX, mouseY]);
 
   const stats = [
     { label: 'Students Impacted', value: '50,000+', icon: Users },
@@ -15,13 +32,33 @@ const Home = () => {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full relative">
+      {/* Interactive Global Background Glow */}
+      <motion.div 
+        className="pointer-events-none fixed top-0 left-0 w-[600px] h-[600px] bg-brand-orange/20 dark:bg-brand-orange/10 rounded-full mix-blend-multiply dark:mix-blend-lighten filter blur-[120px] z-0 hidden md:block"
+        style={{
+          x: mouseX,
+          y: mouseY,
+          translateX: "-50%",
+          translateY: "-50%"
+        }}
+      />
+      <motion.div 
+        className="pointer-events-none fixed top-0 left-0 w-[400px] h-[400px] bg-brand-blue/20 dark:bg-brand-blue/10 rounded-full mix-blend-multiply dark:mix-blend-lighten filter blur-[100px] z-0 hidden md:block"
+        style={{
+          x: mouseX,
+          y: mouseY,
+          translateX: "-10%",
+          translateY: "-10%",
+          transition: "all 0.1s ease-out"
+        }}
+      />
+
       {/* Hero Section */}
-      <section className="relative bg-brand-light dark:bg-zinc-900/50 overflow-hidden">
-        {/* Dynamic Background Elements */}
+      <section className="relative bg-brand-light/50 dark:bg-zinc-900/50 overflow-hidden">
+        {/* Static Background Elements */}
         <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-brand-orange/20 rounded-full mix-blend-multiply filter blur-[100px] animate-pulse"></div>
         <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-brand-blue/10 rounded-full mix-blend-multiply filter blur-[120px]"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-white/40 dark:bg-black/20 rounded-full mix-blend-overlay filter blur-[80px]"></div>
         
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5 z-0"></div>
 
@@ -61,7 +98,7 @@ const Home = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/50 to-transparent mix-blend-multiply"></div>
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-white dark:bg-zinc-900 p-6 rounded-2xl shadow-xl">
+              <div className="absolute -bottom-6 -left-6 bg-stone-100 dark:bg-zinc-900 p-6 rounded-2xl shadow-xl">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-brand-orange/10 rounded-full flex items-center justify-center text-brand-orange">
                     <Heart size={24} />
@@ -78,7 +115,7 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white dark:bg-zinc-900">
+      <section className="py-16 bg-stone-100 dark:bg-zinc-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -150,7 +187,7 @@ const Home = () => {
       </section>
 
       {/* Featured Success Story */}
-      <section className="py-20 bg-white dark:bg-zinc-900">
+      <section className="py-20 bg-stone-100 dark:bg-zinc-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-brand-light dark:bg-black rounded-3xl p-8 md:p-16 border border-slate-100 dark:border-zinc-800 shadow-sm relative overflow-hidden flex flex-col items-center text-center max-w-4xl mx-auto">
             <div className="absolute top-0 right-0 w-64 h-64 bg-brand-orange/10 dark:bg-brand-orange/5 rounded-full mix-blend-multiply blur-3xl"></div>
@@ -226,26 +263,26 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Photo Gallery Grid */}
+            {/* Photo Gallery Masonry */}
             <div className="flex flex-col">
-              <h3 className="text-2xl font-bold text-brand-blue dark:text-white mb-6 flex items-center gap-2">
+              <h3 className="text-2xl font-bold text-brand-blue dark:text-white mb-6 flex items-center gap-2 shrink-0">
                 <Users className="text-brand-orange" /> Photo Highlights
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 flex-grow h-[400px] lg:h-auto">
-                <div className="col-span-2 row-span-2 rounded-2xl overflow-hidden shadow-md group">
-                  <img src="https://dishaforindia.org/wp-content/uploads/2023/05/2-1.jpg" alt="Gallery 1" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+              <div className="columns-2 md:columns-3 gap-4 space-y-4">
+                <div className="break-inside-avoid rounded-2xl overflow-hidden shadow-md group">
+                  <img src="https://dishaforindia.org/wp-content/uploads/2023/05/2-1.jpg" alt="Gallery 1" className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
-                <div className="rounded-2xl overflow-hidden shadow-md group">
-                  <img src="https://dishaforindia.org/wp-content/uploads/2023/05/1-2.jpg" alt="Gallery 2" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                <div className="break-inside-avoid rounded-2xl overflow-hidden shadow-md group">
+                  <img src="https://dishaforindia.org/wp-content/uploads/2023/05/1-2.jpg" alt="Gallery 2" className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
-                <div className="rounded-2xl overflow-hidden shadow-md group">
-                  <img src="https://dishaforindia.org/wp-content/uploads/2023/05/3-1.jpg" alt="Gallery 3" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                <div className="break-inside-avoid rounded-2xl overflow-hidden shadow-md group">
+                  <img src="https://dishaforindia.org/wp-content/uploads/2023/05/3-1.jpg" alt="Gallery 3" className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
-                <div className="rounded-2xl overflow-hidden shadow-md group">
-                  <img src="https://dishaforindia.org/wp-content/uploads/2023/04/disha-1.jpg" alt="Gallery 4" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                <div className="break-inside-avoid rounded-2xl overflow-hidden shadow-md group">
+                  <img src="https://dishaforindia.org/wp-content/uploads/2023/04/disha-1.jpg" alt="Gallery 4" className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
-                <div className="col-span-2 rounded-2xl overflow-hidden shadow-md group">
-                  <img src="https://dishaforindia.org/wp-content/uploads/2023/04/disha-2.jpg" alt="Gallery 5" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                <div className="break-inside-avoid rounded-2xl overflow-hidden shadow-md group">
+                  <img src="https://dishaforindia.org/wp-content/uploads/2023/04/disha-2.jpg" alt="Gallery 5" className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
               </div>
             </div>

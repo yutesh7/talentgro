@@ -40,7 +40,7 @@ const FAQ = () => {
           {faqs.map((faq, idx) => (
             <div 
               key={idx} 
-              className={`bg-white dark:bg-zinc-900 rounded-2xl border ${openIdx === idx ? 'border-brand-orange shadow-md' : 'border-slate-100 dark:border-zinc-800 shadow-sm'} overflow-hidden transition-all`}
+              className={`bg-stone-100 dark:bg-zinc-900 rounded-2xl border ${openIdx === idx ? 'border-brand-orange shadow-md' : 'border-slate-100 dark:border-zinc-800 shadow-sm'} overflow-hidden transition-all`}
             >
               <button 
                 onClick={() => setOpenIdx(openIdx === idx ? -1 : idx)}

@@ -52,7 +52,7 @@ const Events = () => {
             <p className="text-lg text-slate-600 dark:text-slate-300">Join our upcoming events and be a part of the change.</p>
           </div>
           <div className="mt-6 md:mt-0">
-            <select className="px-4 py-3 rounded-xl border border-slate-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-slate-700 dark:text-slate-200 focus:outline-none focus:border-brand-orange cursor-pointer">
+            <select className="px-4 py-3 rounded-xl border border-slate-200 dark:border-zinc-800 bg-stone-100 dark:bg-zinc-900 text-slate-700 dark:text-slate-200 focus:outline-none focus:border-brand-orange cursor-pointer">
               <option>All Categories</option>
               <option>Workshops</option>
               <option>Drives</option>
@@ -68,7 +68,7 @@ const Events = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1 }}
-              className="flex flex-col md:flex-row bg-white dark:bg-zinc-900 rounded-2xl shadow-sm border border-slate-100 dark:border-zinc-800 overflow-hidden hover:shadow-md transition-shadow group"
+              className="flex flex-col md:flex-row bg-stone-100 dark:bg-zinc-900 rounded-2xl shadow-sm border border-slate-100 dark:border-zinc-800 overflow-hidden hover:shadow-md transition-shadow group"
             >
               
               {/* Date Box */}
@@ -133,7 +133,7 @@ const Events = () => {
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="relative bg-white dark:bg-zinc-900 rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden border border-slate-100 dark:border-zinc-800"
+              className="relative bg-stone-100 dark:bg-zinc-900 rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden border border-slate-100 dark:border-zinc-800"
             >
               <div className="bg-brand-blue p-6 text-white relative">
                 <button 

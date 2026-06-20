@@ -36,7 +36,7 @@ const VideoGallery = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="bg-white dark:bg-zinc-900 rounded-3xl overflow-hidden shadow-md border border-slate-100 dark:border-zinc-800"
+              className="bg-stone-100 dark:bg-zinc-900 rounded-3xl overflow-hidden shadow-md border border-slate-100 dark:border-zinc-800"
             >
               <div className="relative aspect-video bg-black group">
                 <video 

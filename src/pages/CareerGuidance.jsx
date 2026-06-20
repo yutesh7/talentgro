@@ -10,7 +10,7 @@ const CareerGuidance = () => {
   ];
 
   return (
-    <div className="w-full bg-white dark:bg-zinc-900 py-12">
+    <div className="w-full bg-stone-100 dark:bg-zinc-900 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -55,14 +55,14 @@ const CareerGuidance = () => {
                   'Top 10 Future Skills for 2030',
                   'Aptitude Test Prep Materials'
                 ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 bg-white dark:bg-zinc-900 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-zinc-800">
+                  <li key={i} className="flex items-center gap-3 bg-stone-100 dark:bg-zinc-900 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-zinc-800">
                     <div className="w-8 h-8 rounded-full bg-brand-orange/10 flex items-center justify-center text-brand-orange font-bold">{i+1}</div>
                     <span className="font-medium text-slate-700 dark:text-slate-200">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="bg-white dark:bg-zinc-900 rounded-2xl p-8 shadow-sm border border-slate-100 dark:border-zinc-800 text-center">
+            <div className="bg-stone-100 dark:bg-zinc-900 rounded-2xl p-8 shadow-sm border border-slate-100 dark:border-zinc-800 text-center">
               <h3 className="text-2xl font-bold text-brand-blue dark:text-white mb-4">Need 1-on-1 Counseling?</h3>
               <p className="text-slate-600 dark:text-slate-300 mb-8">Book a free session with our expert career counselors to find your true calling.</p>
               <button className="btn-primary w-full">Book Free Session</button>

@@ -46,7 +46,7 @@ const ResourceLibrary = () => {
           {/* List */}
           <div className="md:col-span-3 space-y-4">
             {resources.map((res, idx) => (
-              <div key={idx} className="bg-white dark:bg-zinc-900 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-zinc-800 flex items-center justify-between hover:shadow-md transition-shadow">
+              <div key={idx} className="bg-stone-100 dark:bg-zinc-900 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-zinc-800 flex items-center justify-between hover:shadow-md transition-shadow">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-blue-50 text-brand-blue dark:text-white rounded-xl flex items-center justify-center shrink-0">
                     <FileText size={24} />

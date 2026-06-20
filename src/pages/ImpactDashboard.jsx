@@ -21,7 +21,7 @@ const ImpactDashboard = () => {
             { label: 'Active Volunteers', value: '3,105', icon: TrendingUp, color: 'bg-green-100 text-green-600' },
             { label: 'States Reached', value: '14', icon: Map, color: 'bg-purple-100 text-purple-600' },
           ].map((stat, idx) => (
-            <div key={idx} className="bg-white dark:bg-zinc-900 rounded-2xl p-6 shadow-sm border border-slate-100 dark:border-zinc-800 text-center">
+            <div key={idx} className="bg-stone-100 dark:bg-zinc-900 rounded-2xl p-6 shadow-sm border border-slate-100 dark:border-zinc-800 text-center">
               <div className={`w-12 h-12 mx-auto rounded-xl flex items-center justify-center mb-4 ${stat.color}`}>
                 <stat.icon size={24} />
               </div>
@@ -33,7 +33,7 @@ const ImpactDashboard = () => {
 
         {/* Charts Placeholder & India Map */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          <div className="bg-white dark:bg-zinc-900 rounded-3xl p-8 shadow-sm border border-slate-100 dark:border-zinc-800">
+          <div className="bg-stone-100 dark:bg-zinc-900 rounded-3xl p-8 shadow-sm border border-slate-100 dark:border-zinc-800">
             <h3 className="text-xl font-bold text-brand-blue dark:text-white mb-6">Yearly Growth</h3>
             <div className="aspect-video bg-slate-50 dark:bg-black rounded-xl border border-slate-100 dark:border-zinc-800 flex items-center justify-center relative overflow-hidden">
               {/* Mock Bar Chart using HTML/CSS */}
